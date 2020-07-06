@@ -1,0 +1,22 @@
+{
+    "name": "gradient/qr-code",
+    "description": "Author [Dela]",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "endroid/qr-code": ">=3.5.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dela",
+            "email": "xumeng1083@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Gradient\\QrCode\\": "src/"
+        }
+    }
+}
