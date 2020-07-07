@@ -28,24 +28,9 @@ class GradientColor extends Extend
     {
         $this->setColor($this->hexColor, $this->alpha);
 
-        // Each column number
-      //  $block = sqrt(count($this->penColor));
-
-        $this->loopImagePoint(function ($x, $y, $color) use ($block) {
-  /*
-            // In $i, $j drawing point
-            $x_index = (int) floor($x / ($this->imageWidth / $block));
-            $y_index = (int) floor($y / ($this->imageHeight / $block));
-
-            // The plane is converted into the linear algorithm
-            $index = $x_index + (2 * $y_index);
-
-            // Across the line traversal
-            imagesetpixel($this->imageHandle, $x, $y, $this->penColor[$index]);
-
-           */
+        $this->loopImagePoint(function ($x, $y, $color) {
             imagesetpixel($this->imageHandle, $x, $y, $color);
-        });
+        }, $this->penColor);
 
         return $this;
     }
@@ -58,12 +43,7 @@ class GradientColor extends Extend
      */
     protected function setColor(array $colorParameters, $alpha)
     {
-//        foreach ($colorParameters as $color) {
-//            $color = self::hexChangeRgb($color);
-//            $this->penColor[] = imagecolorallocatealpha($this->imageHandle, $color['r'], $color['g'], $color['b'], $alpha);
-//        }
-
-        $this->penColor['start'] = self::hexChangeRgb($colorParameters['start']);
-        $this->penColor['end'] = self::hexChangeRgb($colorParameters['end']);
+        $this->penColor['start'] = trim($colorParameters['start']);
+        $this->penColor['end'] = trim($colorParameters['end']);
     }
 }

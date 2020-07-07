@@ -66,7 +66,9 @@ class Factory
     protected static function getProviders()
     {
         if (is_null(static::$providers)) {
-            static::$providers = require __DIR__.'/Providers.php';
+            static::$providers = [
+                'color' => \Gradient\QrCode\Base\GradientColor::class,
+            ];
         }
 
         return static::$providers;

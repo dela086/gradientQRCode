@@ -23,7 +23,7 @@ class Extend implements ExtInterface
      *
      * @param Closure $closure
      */
-    protected function loopImagePoint(Closure $closure)
+    protected function loopImagePoint(Closure $closure, $penColor)
     {
         list($r1,$g1,$b1) = self::hex2rgb('#FFC500');
         list($r2,$g2,$b2) = self::hex2rgb('#D60006');

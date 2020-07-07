@@ -23,7 +23,6 @@ class QrCodeExt
     public function output(ExtInterface $color)
     {
         $imageString = $this->qrCodeHandle->writeString();
-
         $color->create($imageString)
             ->build()
             ->output($this->output);
@@ -31,7 +30,7 @@ class QrCodeExt
 
     /**
      * 设置输出类型，实际
-     * DavidNineRoc\Qrcode\Foundation\Plus 中调用
+     * Gradient\QrCode\Norm\Extend 中调用
      *
      * @param Closure $closure
      * @return $this
@@ -52,13 +51,12 @@ class QrCodeExt
     {
         ob_start();
         $this->output($color);
-
         return ob_get_clean();
     }
 
     /**
      * 当调用不存在的方法时，去调用
-     * \Endroid\QrCode\\Qrcode 的方法
+     * \Endroid\QrCode\Qrcode 的方法
      *
      * @param $method
      * @param $parameters
@@ -67,7 +65,6 @@ class QrCodeExt
     public function __call($method, $parameters)
     {
         $this->qrCodeHandle->$method(...$parameters);
-
         return $this;
     }
 }
