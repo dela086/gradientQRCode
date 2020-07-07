@@ -1,6 +1,6 @@
 {
-    "name": "gradient/qr-code",
-    "description": "Author [Dela]",
+    "name": "gradient/qr",
+    "description": "gradient qrcode Author[Dela]",
     "type": "library",
     "require": {
         "php": ">=7.1"
