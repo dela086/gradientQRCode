@@ -1,9 +1,7 @@
 <?php
+declare(strict_types=1);
 
 namespace Gradient\QrCode;
-
-
-use Gradient\QrCode\Base\ImageStyle;
 use Gradient\QrCode\Base\GradientColor;
 
 class Factory
@@ -16,7 +14,7 @@ class Factory
      *
      * @param $method
      * @param $parameters
-     * @return ImageStyle | GradientColor
+     * @return GradientColor
      * @throws \Exception
      */
     public static function __callStatic($method, $parameters)
