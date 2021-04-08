@@ -3,7 +3,7 @@ namespace Gradient\QrCode;
 
 use Closure;
 use Gradient\QrCode\Norm\ExtInterface;
-use Endroid\QrCode\QrCode;
+use Simple\QrCode\QrCode;
 
 class QrCodeExt
 {
