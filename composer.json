@@ -3,7 +3,8 @@
     "description": "gradient qrcode Author[Dela]",
     "type": "library",
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "gradient/simple": "^1.0",
     },
     "license": "MIT",
     "authors": [
